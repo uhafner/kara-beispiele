@@ -18,10 +18,6 @@ ifdef::env-github,env-browser[:relfilesuffix: .adoc]
 :figure-caption: Abbildung
 :table-caption: Tabelle
 
-== Aktuelle Aufgabenstellung
-
-Die aktuelle Aufgabenstellung befindet sich in link:src/main/asciidoc/assignment.adoc[einer eigenen Datei] innerhalb dieses Projekts. Das Format für die Aufgabenstellung ist https://docs.asciidoctor.org/asciidoc/latest/[AsciiDoc] (ebenso wie diese README Datei).
-
 == KaraLight
 
 Für die ersten Aufgabenblätter nutzen wir KaraLight. KaraLight ist eine Variante von https://www.swisseduc.ch/informatik/karatojava/[JavaKara], die der Kollege Bastian Katz in Java Swing umgesetzt hat. Dadurch erhalten wir einen einfachen Einstieg in die Programmierung mit Java. Der Marienkäfer Kara wird direkt in Java programmiert. Die Welt von JavaKara ist identisch mit der Welt von Kara. Man sieht also sofort, was die Programme machen.
