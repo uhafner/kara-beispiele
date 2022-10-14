@@ -1,5 +1,7 @@
 package edu.hm.hafner.kara;
 
+import static de.i8k.karalight.Kara.*;
+
 /**
  * KaraLight: Template für die Übungsaufgaben.
  *
@@ -34,5 +36,15 @@ public class Kreis {
      *         damit die automatisierte Auswertung der Ergebnisse funktioniert.
      */
     public static void main(final String... unused) {
+        turnThrough90();
+        turnThrough90();
+        turnThrough90();
+        turnThrough90();
+    }
+
+    static void turnThrough90() {
+        move();
+        turnRight();
+        move();
     }
 }
