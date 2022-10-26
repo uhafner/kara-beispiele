@@ -7,7 +7,7 @@ import static de.i8k.karalight.Kara.*;
  *
  * @author Ullrich Hafner
  */
-public class Tunnel {
+public class CopyAndPaste {
     /**
      * Die {@code main} Methode ist der Ausgangspunkt für KaraLight. Hier wird direkt in Java programmiert, folgende
      * Kara-Befehle können verwendet werden, um Kara zu steuern:
@@ -36,6 +36,24 @@ public class Tunnel {
      *         damit die automatisierte Auswertung der Ergebnisse funktioniert.
      */
     public static void main(final String... unused) {
-        move();
+        walkToTree();
+        var hasLeaf = isOnLeaf();
+        turnAround();
+        walkToTree();
+        if (hasLeaf) {
+            putLeaf();
+        }
     }
+
+    static void walkToTree() {
+        while (!isTreeInFront()) {
+            move();
+        }
+    }
+
+    static void turnAround() {
+        turnRight();
+        turnRight();
+    }
+
 }
