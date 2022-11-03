@@ -7,7 +7,7 @@ import static de.i8k.karalight.Kara.*;
  *
  * @author Ullrich Hafner
  */
-public class CopyAndPaste {
+public class Counter {
     /**
      * Die {@code main} Methode ist der Ausgangspunkt für KaraLight. Hier wird direkt in Java programmiert, folgende
      * Kara-Befehle können verwendet werden, um Kara zu steuern:
@@ -36,17 +36,27 @@ public class CopyAndPaste {
      *         automatisierte Auswertung der Ergebnisse funktioniert.
      */
     public static void main(final String... unused) {
-        while (true) {
-            moveToTree();
-            boolean wasOnLeaf = isOnLeaf();
-            turnLeft();
-            turnLeft();
-            moveToTree();
-            if (wasOnLeaf) {
-                putLeaf();
+        int y = 0;
+        int moves = 0;
+        while (y < 8) {
+            int x = 0;
+            while (x < 8) {
+                move();
+                x++;
+                moves++;
             }
-
+            moveDown();
+            y++;
         }
+        say("Zeile: " + y);
+//        say("Spalte: " + x);
+        say("moves: " + moves);
+    }
+
+    private static void moveDown() {
+        turnRight();
+        move();
+        turnLeft();
     }
 
     private static void moveToTree() {
