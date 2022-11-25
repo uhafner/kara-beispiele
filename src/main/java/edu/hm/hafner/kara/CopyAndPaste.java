@@ -36,16 +36,13 @@ public class CopyAndPaste {
      *         automatisierte Auswertung der Ergebnisse funktioniert.
      */
     public static void main(final String... unused) {
-        while (true) {
-            moveToTree();
-            boolean wasOnLeaf = isOnLeaf();
-            turnLeft();
-            turnLeft();
-            moveToTree();
-            if (wasOnLeaf) {
-                putLeaf();
-            }
-
+        moveToTree();
+        boolean wasOnLeaf = isOnLeaf();
+        turnLeft();
+        turnLeft();
+        moveToTree();
+        if (wasOnLeaf) {
+            putLeaf();
         }
     }
 

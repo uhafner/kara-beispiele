@@ -36,10 +36,9 @@ public class Kreis {
      *         damit die automatisierte Auswertung der Ergebnisse funktioniert.
      */
     public static void main(final String... unused) {
-        turnThrough90();
-        turnThrough90();
-        turnThrough90();
-        turnThrough90();
+        for (int i = 0; i < 4; i++) {
+            turnThrough90();
+        }
     }
 
     static void turnThrough90() {
