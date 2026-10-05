@@ -1,0 +1,50 @@
+{
+  "tests": {
+    "name": "Tests",
+    "tools": [ {
+      "id": "junit",
+      "name": "Unit Tests",
+      "pattern": "**/target/surefire-reports/TEST*.xml"
+    }, {
+      "id": "junit",
+      "icon": "no_entry",
+      "name": "Architecture Tests",
+      "pattern": "**/target/archunit-reports/TEST*.xml"
+    } ],
+    "failureRateImpact": -1,
+    "maxScore": 100
+  },
+  "analysis": [ {
+    "name": "Style",
+    "id": "style",
+    "tools": [ {
+      "id": "checkstyle",
+      "pattern": "**/target/**checkstyle-result.xml"
+    }, {
+      "id": "pmd",
+      "pattern": "**/target/pmd-*/pmd.xml"
+    } ],
+    "errorImpact": -1,
+    "highImpact": -1,
+    "normalImpact": -1,
+    "lowImpact": -1,
+    "maxScore": 100
+  }, {
+    "name": "Bugs",
+    "id": "bugs",
+    "icon": "bug",
+    "tools": [ {
+      "id": "spotbugs",
+      "sourcePath": "src/main/java",
+      "pattern": "**/target/spotbugsXml.xml"
+    }, {
+      "id": "error-prone",
+      "pattern": "**/maven.log"
+    } ],
+    "errorImpact": -1,
+    "highImpact": -1,
+    "normalImpact": -1,
+    "lowImpact": -1,
+    "maxScore": 100
+  } ]
+}

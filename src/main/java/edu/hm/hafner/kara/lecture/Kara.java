@@ -1,5 +1,9 @@
-package edu.hm.hafner.kara;
+package edu.hm.hafner.kara.lecture;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
+@SuppressWarnings("all")
+@SuppressFBWarnings("URF")
 public class Kara {
     // Eigenschaften
     int anzahlPunkte = 13;
@@ -38,7 +42,7 @@ public class Kara {
         }
     }
 
-    public static void main(final String[] args) {
+    static void main(final String[] args) {
         var kara = new Kara(3, 6);
         System.out.println(kara.getX());
         var linksOben = new Kara();
